@@ -1,0 +1,93 @@
+﻿<Application x:Class="LibraryApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LibraryApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock" x:Key="TBlockUp">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#FFE973"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TBlockLeftPanel">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FFE973"/>
+            <Setter Property="MinWidth" Value="110"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TBlockAdd" BasedOn="{StaticResource TBlockLeftPanel}">
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="Grid" x:Key="LeftAndBotPanelGrid">
+            <Setter Property="Background" Value="#251F1F"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="TBoxLeftPanel">
+            <Setter Property="Background" Value="#251F1F"/>
+            <Setter Property="BorderBrush" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#FFE973"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="TBoxAdd" BasedOn="{StaticResource TBoxLeftPanel}">
+            <Setter Property="Width" Value="110"/>
+        </Style>
+        <Style TargetType="Grid" x:Key="GridUp">
+            <Setter Property="Background" Value="#FFE973"/>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#251F1F"/>
+            <Setter Property="Background" Value="#FFE973"/>
+            <Setter Property="Foreground" Value="#251F1F"/>
+        </Style>
+        <Style TargetType="DataGridCell">
+            <Setter Property="BorderBrush" Value="#FFE973"/>
+            <Setter Property="Background" Value="#251F1F"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style TargetType="DataGridRowHeader">
+            <Setter Property="Background" Value="#FFFFFF"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="WrapText">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonMain">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="#251F1F"/>
+            <Setter Property="BorderBrush" Value="#FFE973"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Margin="5"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#251F1F"/>
+                    <Setter Property="Foreground" Value="#FFE973"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="110"/>
+        </Style>
+    </Application.Resources>
+</Application>

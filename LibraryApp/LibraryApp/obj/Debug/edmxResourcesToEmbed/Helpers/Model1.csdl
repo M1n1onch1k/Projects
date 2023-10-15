@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EducationalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Library">
+    <Key>
+      <PropertyRef Name="ID_card" />
+    </Key>
+    <Property Name="ID_card" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_readers" Type="Int32" />
+    <Property Name="Book_title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Data_issue" Type="DateTime" Precision="0" />
+    <Property Name="Data_return" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Reader" Relationship="Self.FK_Library_Reader" FromRole="Library" ToRole="Reader" />
+  </EntityType>
+  <EntityType Name="Reader">
+    <Key>
+      <PropertyRef Name="ID_readers" />
+    </Key>
+    <Property Name="ID_readers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Library" Relationship="Self.FK_Library_Reader" FromRole="Reader" ToRole="Library" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Library_Reader">
+    <End Role="Reader" Type="Self.Reader" Multiplicity="0..1" />
+    <End Role="Library" Type="Self.Library" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reader">
+        <PropertyRef Name="ID_readers" />
+      </Principal>
+      <Dependent Role="Library">
+        <PropertyRef Name="ID_readers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EducationalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Library" EntityType="Self.Library" />
+    <EntitySet Name="Reader" EntityType="Self.Reader" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Library_Reader" Association="Self.FK_Library_Reader">
+      <End Role="Reader" EntitySet="Reader" />
+      <End Role="Library" EntitySet="Library" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

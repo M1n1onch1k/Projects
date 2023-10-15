@@ -1,0 +1,9 @@
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\LibraryApp.csproj.AssemblyReference.cache
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\MainWindow.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\Pages\AddReaders.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\Pages\LibraryCard.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\Pages\Readers.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\App.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\LibraryApp_Content.g.cs
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\LibraryApp_MarkupCompile.cache
+C:\Users\chup5\source\repos\LibraryApp\LibraryApp\obj\Debug\LibraryApp_MarkupCompile.lref
