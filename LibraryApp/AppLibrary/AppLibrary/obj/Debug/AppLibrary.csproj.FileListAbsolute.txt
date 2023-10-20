@@ -1,0 +1,11 @@
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\AppLibrary.csproj.AssemblyReference.cache
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\MainWindow.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\Pages\PageEditCard.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\Pages\PageEditReader.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\Pages\PageLibraryCard.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\Pages\PageListView.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\Pages\PageReaders.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\App.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\AppLibrary_Content.g.cs
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\AppLibrary_MarkupCompile.cache
+C:\Users\chup5\source\repos\AppLibrary\AppLibrary\obj\Debug\AppLibrary_MarkupCompile.lref

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище EducationalModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Library">
+    <Key>
+      <PropertyRef Name="ID_card" />
+    </Key>
+    <Property Name="ID_card" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_readers" Type="int" />
+    <Property Name="Book_title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Data_issue" Type="date" />
+    <Property Name="Data_return" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reader">
+    <Key>
+      <PropertyRef Name="ID_readers" />
+    </Key>
+    <Property Name="ID_readers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Library_Reader">
+    <End Role="Reader" Type="Self.Reader" Multiplicity="0..1" />
+    <End Role="Library" Type="Self.Library" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reader">
+        <PropertyRef Name="ID_readers" />
+      </Principal>
+      <Dependent Role="Library">
+        <PropertyRef Name="ID_readers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище EducationalModelContainer">
+    <EntitySet Name="Library" EntityType="Self.Library" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reader" EntityType="Self.Reader" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Library_Reader" Association="Self.FK_Library_Reader">
+      <End Role="Reader" EntitySet="Reader" />
+      <End Role="Library" EntitySet="Library" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище EducationalModelContainer" CdmEntityContainer="EducationalEntities">
+    <EntitySetMapping Name="Library">
+      <EntityTypeMapping TypeName="EducationalModel.Library">
+        <MappingFragment StoreEntitySet="Library">
+          <ScalarProperty Name="ID_card" ColumnName="ID_card" />
+          <ScalarProperty Name="ID_readers" ColumnName="ID_readers" />
+          <ScalarProperty Name="Book_title" ColumnName="Book_title" />
+          <ScalarProperty Name="Data_issue" ColumnName="Data_issue" />
+          <ScalarProperty Name="Data_return" ColumnName="Data_return" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reader">
+      <EntityTypeMapping TypeName="EducationalModel.Reader">
+        <MappingFragment StoreEntitySet="Reader">
+          <ScalarProperty Name="ID_readers" ColumnName="ID_readers" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
